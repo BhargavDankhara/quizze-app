@@ -10,9 +10,7 @@ const QuizList = () => {
   useEffect(() => {
     const fetchQuizzes = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:5000/api/quizzes/get"
-        );
+        const response = await axios.get("/api/quizzes/get");
         setQuizzes(response.data.data);
       } catch (err) {
         console.error("Error fetching quizzes:", err);

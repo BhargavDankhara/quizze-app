@@ -7,13 +7,13 @@ const QuizCard = ({ quiz }) => {
       <h3 className="text-xl font-semibold mb-2 text-gray-800">{quiz.title}</h3>
       <p className="text-gray-600 mb-4">{quiz.description}</p>
       <div className="flex justify-between items-center">
-        <Link to={`/quiz/${quiz._id}`}>
+        <Link to="/quizzes/detail">
           <button className="bg-indigo-500 text-white font-semibold py-2 px-4 rounded hover:bg-indigo-600 transition duration-200">
             Start Quiz
           </button>
         </Link>
         <span className="text-gray-500 text-sm">
-          {quiz.questionCount} Questions
+          {/* {quiz.questionCount} Questions */}
         </span>
       </div>
     </div>
@@ -25,7 +25,7 @@ QuizCard.propTypes = {
     _id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    questionCount: PropTypes.string.isRequired,
+    // questionCount: PropTypes.string.isRequired,
   }).isRequired,
 };
 
